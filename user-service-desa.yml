@@ -14,7 +14,8 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: mitocode
+      # database: mitocode
+      # username: mitocode
       uri: mongodb://mitocode:mitocode@localhost:27017
       authentication-database: admin
     
