@@ -24,8 +24,8 @@ spring:
             - StripPrefix=2
             - MitocodeFilter=MitocodeKey,MitocodeValue
             #bloques //
-            # - name: CustomFilter
-            #   args:
-            #     headerKey: MitocodeKey
-            #     headerValue: MitocodeValue
+            # - CustomFilterMitocode=MitocodeKey, MitocodeValue
+            - AddRequestHeader=MitocodeKey, MitocodeValue
+            - AddResponseHeader=MitocodeHeader, MitocodeHeaderValue
+            # - AddRequestParameter=role, ROLE_USER
            
