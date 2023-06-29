@@ -23,7 +23,8 @@ spring:
           filters:
             - StripPrefix=2
             #bloques //
-            - name: CustomFilter
-              args: 
-                headerKey: MitocodeKey
-                headerValue: MitocodeValue
+            # - name: CustomFilter
+            #   args:
+            #     headerKey: MitocodeKey
+            #     headerValue: MitocodeValue
+            - MitocodeFilter=MitocodeKey,MitocodeValue
