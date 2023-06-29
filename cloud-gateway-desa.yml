@@ -22,9 +22,10 @@ spring:
             - Path=/api/user-service/**
           filters:
             - StripPrefix=2
+            - MitocodeFilter=MitocodeKey,MitocodeValue
             #bloques //
             # - name: CustomFilter
             #   args:
             #     headerKey: MitocodeKey
             #     headerValue: MitocodeValue
-            - MitocodeFilter=MitocodeKey,MitocodeValue
+           
