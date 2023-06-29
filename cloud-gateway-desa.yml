@@ -1,23 +1,24 @@
 server:
-  #port: 9080
-  port: ${CUSTOM.SERVER.PORT:9080}   
+  port: ${CUSTOM.SERVER.PORT:9080}
 
-#eureka client config
+# Eureka Client Config
 eureka:
   client:
-    fetch-registry: true
+    fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka
 
-#cloud Gateway Routes 
+# Cloud Gateway Routes
+
 spring:
   cloud:
     gateway:
-      routes:
+      routes: 
         - id: user-service-data
-          uri: lb://user-service #Spring: application: name
+          uri: lb://user-service
+          #uri spring: application:name
           predicates:
-            - path=/api/user-service/**
+            - Path=/api/user-service/**
           filters:
-            - StripPrefix=2 #bloques de path //
+            - StripPrefix=2 #bloques //
