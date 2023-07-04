@@ -1,0 +1,32 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:9001}
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+### Mongo database configuration
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mitocode:mitocode@localhost:27017/mitocodedb?authSource=admin
+
+# Actuator configuration
+info:
+  app:
+    name: Product Service Microservice
+    description: Módulo de la arquitectura que disponibiliza información de los productos
+    version: 1.0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /actuator
+  info:
+    env:
+      enabled: true
